@@ -1,0 +1,103 @@
+/* Professional Monochrome Theme
+ *
+ * text: #e0e0e0
+ * text-secondary: #a0a0a0
+ * text-background: #808080
+ * prompt: #ffffff
+ * URLs: #cccccc
+ * selection: #404040
+ * active border: #606060
+ * background: #1a1a1a
+ * */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
+* {
+  background: #1a1a1a;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  color: #e0e0e0;
+}
+
+body {
+  min-height: 95vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+}
+
+h3 {
+  display: inline-block;
+  font-size: inherit;
+  padding: 0 0.5em;
+  margin-bottom: 0;
+  background-color: #404040;
+  color: #ffffff;
+}
+
+a {
+  color: #cccccc;
+  text-decoration: none;
+}
+
+.text-secondary {
+  color: #a0a0a0;
+}
+
+.text-background {
+  color: #808080;
+}
+
+.linkedin:hover {
+  color: #772ce8;
+}
+
+.github:hover {
+  color: #a6d189;
+}
+
+.bluesky:hover {
+  color: #208bfe;
+}
+
+.cursor {
+  color: #ffffff;
+}
+
+.output {
+  width: 100%;
+  max-width: 80ch;
+  animation: fade 5s;
+}
+
+.typeme {
+  width: 26ch;
+  animation: typing 2s steps(26), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 10px solid #ffffff;
+}
+
+/* animation */
+
+@keyframes fade {
+  0% { opacity: 0}
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes typing {
+  0% { width: 0; }
+  100% { width: 26ch; }
+}
+    
+@keyframes blink {
+  50% { border-color: transparent;}
+}
+
+/* dynamic resizing */
+@media (min-width:600px) {
+  body {
+    font-size: 1.25rem;
+  }
+}
