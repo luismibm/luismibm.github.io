@@ -1,6 +1,4 @@
-/* Professional Monochrome Theme
- *
- * text: #e0e0e0
+/* text: #e0e0e0
  * text-secondary: #a0a0a0
  * text-background: #808080
  * prompt: #ffffff
@@ -8,7 +6,7 @@
  * selection: #404040
  * active border: #606060
  * background: #1a1a1a
- * */
+ */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap');
 
 * {
@@ -48,16 +46,20 @@ a {
   color: #808080;
 }
 
-.linkedin:hover {
-  color: #772ce8;
+
+.link:hover {
+  color: #a0a0a0;
+  text-decoration: underline;
 }
 
-.github:hover {
-  color: #a6d189;
+.project-description {
+  margin-left: 1rem;
 }
 
-.bluesky:hover {
-  color: #208bfe;
+.project-link {
+  color: #a0a0a0;
+  text-decoration: underline;
+  margin-left: 2rem;
 }
 
 .cursor {
@@ -67,12 +69,12 @@ a {
 .output {
   width: 100%;
   max-width: 80ch;
-  animation: fade 5s;
+  animation: fade 3s;
 }
 
 .typeme {
-  width: 26ch;
-  animation: typing 2s steps(26), blink .5s step-end infinite alternate;
+  max-width: 31ch;
+  animation: typing 1.4s steps(31), blink .5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 10px solid #ffffff;
@@ -87,8 +89,8 @@ a {
 }
 
 @keyframes typing {
-  0% { width: 0; }
-  100% { width: 26ch; }
+  0% { max-width: 0; }
+  100% { max-width: 32ch; }
 }
     
 @keyframes blink {
