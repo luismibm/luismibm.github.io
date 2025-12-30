@@ -5,9 +5,14 @@
  * URLs: #cccccc
  * selection: #404040
  * active border: #606060
+ * accent: #ff7a1f
  * background: #1a1a1a
  */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
+:root {
+  --accent: #ff7a1f;
+}
 
 * {
   background: #1a1a1a;
@@ -21,16 +26,34 @@ body {
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  font-size: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+p {
+  margin: 0.35rem 0;
 }
 
 h3 {
   display: inline-block;
-  font-size: inherit;
+  font-size: 1.05rem;
   padding: 0 0.5em;
-  margin-bottom: 0;
+  margin: 1.1rem 0 0.35rem;
   background-color: #404040;
   color: #ffffff;
+  border-left: 3px solid var(--accent);
+  font-weight: 700;
+}
+
+.output h3:first-of-type {
+  margin-top: 0.4rem;
+}
+
+h4 {
+  font-size: 1rem;
+  margin: 0.4rem 0 0.2rem;
+  color: #eaeaea;
+  font-weight: 600;
 }
 
 a {
@@ -48,22 +71,84 @@ a {
 
 
 .link:hover {
-  color: #a0a0a0;
+  color: var(--accent);
   text-decoration: underline;
 }
+
 
 .project-description {
   margin-left: 1rem;
 }
 
 .project-link {
-  color: #a0a0a0;
+  color: var(--accent);
   text-decoration: underline;
+  margin-left: 1rem;
+}
+
+.project-block {
+  margin-bottom: 1rem;
+}
+
+.project-meta {
+  color: #a0a0a0;
+  display: block;
+  margin-left: 1rem;
+}
+
+.project-title {
+  font-weight: 600;
+  display: block;
+}
+
+.experience-block {
+  margin-bottom: 1rem;
+}
+
+.experience-title {
+  font-weight: 600;
+  display: block;
+}
+
+.experience-meta {
+  color: #a0a0a0;
+  display: block;
+}
+
+.experience-description {
+  margin-left: 1rem;
+}
+
+.experience-meta-tech {
+  color: #a0a0a0;
+  display: block;
+  margin-left: 1rem;
+}
+
+.indent {
+  margin-left: 1.25rem;
+}
+
+.indent-2 {
   margin-left: 2rem;
 }
 
+.study-block {
+  margin-bottom: 0.9rem;
+}
+
+.study-title {
+  font-weight: 600;
+  display: block;
+}
+
+.study-meta {
+  color: #a0a0a0;
+  display: block;
+}
+
 .cursor {
-  color: #ffffff;
+  color: var(--accent);
 }
 
 .output {
@@ -77,7 +162,7 @@ a {
   animation: typing 1.4s steps(31), blink .5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 10px solid #ffffff;
+  border-right: 10px solid var(--accent);
 }
 
 /* animation */
@@ -100,6 +185,6 @@ a {
 /* dynamic resizing */
 @media (min-width:600px) {
   body {
-    font-size: 1.25rem;
+    font-size: 1.05rem;
   }
 }
